@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class cambiasprite : MonoBehaviour {
 public Text textocerdo;
 public Text textobajas;
+bool touchmachin;
 public Animator animacion;
 
 
@@ -12,7 +13,7 @@ public Animator animacion;
 	// Use this for initialization
 	void Start () {
 		
-		
+		touchmachin=false;
 	}
 	
 	// Update is called once per frame
@@ -26,7 +27,10 @@ public Animator animacion;
 			
 				
 		animacion.SetBool("tocino",true);
+		if(touchmachin==false){
 		globalvariables.bajas++;
+		touchmachin=true;}
+
 
 		}
 		if(other.tag=="safe"){

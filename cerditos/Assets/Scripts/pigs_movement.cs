@@ -32,14 +32,14 @@ public class pigs_movement : MonoBehaviour {
 	public Text texto;
 	public Text textosalvados;
 
-	public double tiempo;
+	 float tiempo;
 
 	int posicionactual;
 	public MeshRenderer mr;
 	// Use this for initialization
 	 void Start () {
 		 
-	
+		 tiempo=Random.Range(0.7f,2.5f);
 		scale_pigsc=transform.localScale;
 		suma_pesos.cerdos_salvados=0;
 		movementbool=true;

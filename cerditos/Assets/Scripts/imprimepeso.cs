@@ -13,7 +13,8 @@ public class imprimepeso : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		texto.text=""+suma_pesos.pesototal+"kg";
+		int sp=(int)suma_pesos.pesototal;
+		texto.text=""+sp+"kg";
 		
 	}
 }

@@ -25,6 +25,7 @@ public static double tiempo;
 	// Update is called once per frame
 	void Update () {
 		if(Setentaporciento.porcentajedecerdossalvados>=100){
+			PlayerPrefs.SetInt("levelactualb",2);
 				Nextlvlbtn.enabled=true;
 				Nextlvlimage.enabled=true;
 				Rstarbtn.enabled=true;

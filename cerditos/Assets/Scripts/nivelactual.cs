@@ -29,7 +29,7 @@ public class nivelactual : MonoBehaviour {
 			case 4:SceneManager.LoadScene("escena1");break;
 			case 7:SceneManager.LoadScene("escena1");break;
 
-			case 2:SceneManager.LoadScene("maquinita");break;
+			case 2:SceneManager.LoadScene("historia_2");break;
 			case 5:SceneManager.LoadScene("maquinita");break;
 			case 8:SceneManager.LoadScene("maquinita");break;
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class dialogo : MonoBehaviour {
+	public int gotoscene;
 	int d;
 public SpriteRenderer d1;
 public SpriteRenderer d2;
@@ -34,7 +35,8 @@ public SpriteRenderer d10;
 			case 5:d1.sprite=d6.sprite;d=6;break;
 			case 6:d1.sprite=d7.sprite;d=7;break;
 			case 7:d1.sprite=d8.sprite;d=8;break;
-			case 8:SceneManager.LoadScene("escena2");break;
+			case 8:if(gotoscene==2){SceneManager.LoadScene("succionadora");}else{
+			SceneManager.LoadScene("escena2");}break;
 			//case 9:d1.sprite=d10.sprite;d=10;break;
 			
 		}

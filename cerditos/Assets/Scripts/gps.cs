@@ -21,6 +21,7 @@ public class gps : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		switch(globalvariables.target){
 			case 1:transform.LookAt(target1);break;
 			case 2:transform.LookAt(target2);break;
@@ -33,6 +34,6 @@ public class gps : MonoBehaviour {
 			case 9:transform.LookAt(target9);break;
 			case 10:transform.LookAt(target10);break;
 		}
-		
+		}
 	}
 }

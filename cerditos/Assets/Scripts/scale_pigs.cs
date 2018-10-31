@@ -12,6 +12,8 @@ public class scale_pigs : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		transform.localScale=scale_pigsc;
+	}
 	}
 }

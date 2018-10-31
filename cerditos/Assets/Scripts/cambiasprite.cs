@@ -23,6 +23,7 @@ public Animator animacion;
 		
 	}
 	void OnTriggerEnter(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="maquina"){
 			
 				
@@ -42,4 +43,5 @@ public Animator animacion;
 			Destroy(this.gameObject);
 		}
 	}
+}
 }

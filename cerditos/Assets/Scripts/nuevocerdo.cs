@@ -19,6 +19,7 @@ public class nuevocerdo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		tiempo=tiempo+Time.deltaTime;
 		if(tiempo>x){
 			randomio=Random.Range(1,5);
@@ -35,6 +36,7 @@ public class nuevocerdo : MonoBehaviour {
 			//x-=0.01;
 			}
 			tiempo=Random.Range(5,10);
+		}
 		}
 	}
 }

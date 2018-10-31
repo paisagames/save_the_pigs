@@ -34,6 +34,7 @@ public SpriteRenderer sr4;
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		sphera.Rotate(0,velocidadsphera,0);
 		if(metros>300){
 			carro3.enabled=true;
@@ -59,6 +60,7 @@ public SpriteRenderer sr4;
 
 
 	texttotalcerdos.text="pigs:"+globalvariables.totalcerdos;	
+	}
 	}
 	void OnTriggerEnter(Collider other){
 		if(other.tag=="target"){

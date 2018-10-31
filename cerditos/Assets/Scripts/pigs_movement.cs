@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class pigs_movement : MonoBehaviour {
+	public SpriteRenderer cerdosprite;
 	public Material azul;
 	public Material pink;
 	bool agarradobool;
@@ -52,6 +53,7 @@ public class pigs_movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		int tiempoquehapasado=(int)maxtiempott.tiempott;
 		int limite=(int)maxtiempott.maxtotal;
 		textosalvados.text="Saved Pigs:"+suma_pesos.cerdos_salvados+"  -------"+(limite-tiempoquehapasado)+"seg";
@@ -88,7 +90,8 @@ public class pigs_movement : MonoBehaviour {
 		}
 		}
 		if(posicionactual!=17&&posicionactual!=18){
-			mr.material=pink;
+			//mr.material=pink;
+			cerdosprite.color=Color.white;
 			movementbool=true;
 		}else{movementbool=false;}
 
@@ -110,6 +113,7 @@ public class pigs_movement : MonoBehaviour {
 	//}
 
 
+	}
 	}
 	
 	void newrandom(){
@@ -137,7 +141,8 @@ public class pigs_movement : MonoBehaviour {
 			tiempo=-5;
 			
 			
-			mr.material=azul;
+			//mr.material=azul;
+			cerdosprite.color=Color.blue;
 			
 			textosalvados.text="Saved Pigs:"+suma_pesos.cerdos_salvados+",time:"+(maxtiempott.maxtotal-maxtiempott.tiempott)+"seg";
 			

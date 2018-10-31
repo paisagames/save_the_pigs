@@ -11,10 +11,12 @@ public class moveminiplatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(transform.position.x<5.6f){
 		transform.Translate(0.04f,0,0);}
 		else{
 			transform.position=new Vector3(-5.8f,-7.68f,-0.24f);
 		}
+	}
 	}
 }

@@ -43,6 +43,7 @@ public class cerdosamaquina : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		
 		tiempo=tiempo+Time.deltaTime;
 		if(tiempo>4){
@@ -68,7 +69,7 @@ public class cerdosamaquina : MonoBehaviour {
 		}
 		
 	texto.text="tiempo:"+tiempo+",dt:"+Time.deltaTime;	
-	
+		}
 
 	}
 	void ponuncerdo(){

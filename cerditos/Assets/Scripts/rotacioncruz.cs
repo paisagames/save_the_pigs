@@ -11,12 +11,13 @@ public class rotacioncruz : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(transform.position.x>0.15f){
 			transform.Rotate(0,2f,0);
 		}else{
 		if(transform.position.x<-0.15f){
 			transform.Rotate(0,-2f,0);
 		}else{transform.Rotate(0,0,0);}}
-		
+		}
 	}
 }

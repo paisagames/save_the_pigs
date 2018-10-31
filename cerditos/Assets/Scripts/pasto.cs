@@ -12,10 +12,12 @@ public class pasto : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if(globalvariables.pausado==false){
 		transform.Translate(0,0,-1f);
 		if(transform.position.z<=fin.position.z){
 			transform.position=inicio.position;
 
-	}
+	}}
 	}
 }

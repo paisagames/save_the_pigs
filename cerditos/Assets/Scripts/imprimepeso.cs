@@ -13,8 +13,10 @@ public class imprimepeso : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		int sp=(int)suma_pesos.pesototal;
 		texto.text=""+sp+"kg";
+		}
 		
 	}
 }

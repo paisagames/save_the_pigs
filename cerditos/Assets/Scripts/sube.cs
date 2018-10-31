@@ -20,6 +20,7 @@ public class sube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(subirbool==true){
 			transform.Translate(0,0.02f,0);
 			
@@ -33,6 +34,7 @@ public class sube : MonoBehaviour {
 			if(subirbool==false){
 			imagepanel.color=blue;
 			
+		}
 		}
 		}
 	}

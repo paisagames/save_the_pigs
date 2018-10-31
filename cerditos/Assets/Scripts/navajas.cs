@@ -24,6 +24,7 @@ public static double tiempo;
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(Setentaporciento.porcentajedecerdossalvados>=100){
 			PlayerPrefs.SetInt("levelactualb",2);
 				Nextlvlbtn.enabled=true;
@@ -52,9 +53,10 @@ public static double tiempo;
 			transform.localPosition=new Vector3(0f,-5.33f,-0.05f);
 		}
 
-		
+		}
 	}
 	void OnTriggerEnter(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="cubo"){
 			Rstarbtn.enabled=true;
 			Rstarimage.enabled=true;
@@ -79,4 +81,5 @@ public static double tiempo;
 		
 		}
 	}
+}
 }

@@ -23,6 +23,7 @@ public double tiempo;
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		tiempo=tiempo+Time.deltaTime;
 		if(tiempo>5){
 			i=Random.Range(1,10);
@@ -43,5 +44,6 @@ public double tiempo;
 		}
 
 
+	}
 	}
 }

@@ -12,6 +12,8 @@ public class lookat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		transform.LookAt(objeto);
+		}
 	}
 }

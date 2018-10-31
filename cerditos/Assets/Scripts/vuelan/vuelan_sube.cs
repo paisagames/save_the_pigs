@@ -13,6 +13,8 @@ public class vuelan_sube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(globalvariables.pausado==false){
 		if(arribabool){
 			if(transform.position.y<arriba.position.y){
 			transform.Translate(0,0,0.025f);}else{
@@ -23,6 +25,7 @@ public class vuelan_sube : MonoBehaviour {
 			transform.Translate(0,0,-0.025f);}else{
 				arribabool=true;
 			}
+		}
 		}
 	}
 }

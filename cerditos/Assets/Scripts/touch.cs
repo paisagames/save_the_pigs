@@ -35,6 +35,7 @@ public class touch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		/*mitadx=canvas_X/2f;
 		mitady=canvas_Y/2f;*/
 		 if (Input.touchCount > 0) {// && Input.GetTouch(0).phase == TouchPhase.Moved)
@@ -44,5 +45,6 @@ public class touch : MonoBehaviour {
 			touchhelper.transform.position=touch2;
 			spherhelper.transform.localPosition=new Vector3((touchhelper.transform.localPosition.x/10f)-5f,spherhelper.transform.localPosition.y,(touchhelper.transform.localPosition.y/10f)-5f);
 		}
+	}
 	}
 }

@@ -19,8 +19,10 @@ public class imprimesalvados : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		textmuertos.text=""+salvadosono.muertos;
 		textsalvados.text=""+salvadosono.salvados;
 		
+	}
 	}
 }

@@ -17,6 +17,7 @@ bool direccion;
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		seconds+=Time.deltaTime;
 		if (seconds>2){
 			seconds=0;
@@ -27,5 +28,6 @@ bool direccion;
 		transform.Translate(x,y,z);}
 		else{transform.Translate(-x,y,z);}
 		
+	}
 	}
 }

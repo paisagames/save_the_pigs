@@ -16,7 +16,7 @@ public class camion_movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(globalvariables.pausado==false){
 		//si el cubo esta triggereado no afecta
 		if(movement){
 			//camara.transform.Translate(0,0.1f,0);
@@ -29,6 +29,7 @@ public class camion_movement : MonoBehaviour {
 			if(transform.position.x>72f){
 			transform.Translate(-0.05f,0,0);}
 			}//antes transform.Rotate(0,0,1.0f);}
+		}
 	}
 	public void derecha_down(){
 		down_derecha=true;

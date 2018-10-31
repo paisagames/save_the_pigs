@@ -11,7 +11,9 @@ public class sameposition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		transform.position=posicionbase.position;
+		}
 		
 	}
 }

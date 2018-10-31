@@ -14,6 +14,7 @@ public class movecamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(imagemove.transform.position.y>borderarroba.transform.position.y){
 			if(transform.position.y<29.0f){
 			transform.Translate(0,0.07f,0);
@@ -25,4 +26,5 @@ public class movecamera : MonoBehaviour {
 		}
 		
 	}
+}
 }

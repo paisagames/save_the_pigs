@@ -14,12 +14,14 @@ public class cubitos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(activado==true){
 		//	transform.Translate(0,0.2f,0);
 		}
-		
+		}
 	}
 	void OnTriggerEnter(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="dedo"){
 			activado=true;
 		}
@@ -27,5 +29,6 @@ public class cubitos : MonoBehaviour {
 			activado=false;
 			transform.position=posicioninicial;
 		}
+	}
 	}
 }

@@ -14,6 +14,7 @@ public class rotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		transform.Rotate(x,y,z);
-	}
+	}}
 }

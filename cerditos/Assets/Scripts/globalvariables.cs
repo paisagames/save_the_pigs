@@ -10,4 +10,5 @@ public class globalvariables : Object {
 	public static int totalcerdos;
 	public static int garra;
 	public static float velocidadbotones;
+	public static bool pausado;
 }

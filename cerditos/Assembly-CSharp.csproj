@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\disparaCorrected.cs" />
      <Compile Include="Assets\Scripts\byebolita.cs" />
+     <Compile Include="Assets\Scripts\cambia_nivel_principal.cs" />
      <Compile Include="Assets\Scripts\cambiasprite.cs" />
      <Compile Include="Assets\Scripts\camion_movement.cs" />
      <Compile Include="Assets\Scripts\cerdo_peso.cs" />
@@ -65,12 +66,14 @@
      <Compile Include="Assets\Scripts\follow.cs" />
      <Compile Include="Assets\Scripts\globalvariables.cs" />
      <Compile Include="Assets\Scripts\gps.cs" />
+     <Compile Include="Assets\Scripts\heliland.cs" />
      <Compile Include="Assets\Scripts\imprimepeso.cs" />
      <Compile Include="Assets\Scripts\killcerditoscamion.cs" />
      <Compile Include="Assets\Scripts\lookat.cs" />
      <Compile Include="Assets\Scripts\maxtiempott.cs" />
      <Compile Include="Assets\Scripts\movecamera.cs" />
      <Compile Include="Assets\Scripts\moveminiplatform.cs" />
+     <Compile Include="Assets\Scripts\muevefondo.cs" />
      <Compile Include="Assets\Scripts\navajas.cs" />
      <Compile Include="Assets\Scripts\nivelactual.cs" />
      <Compile Include="Assets\Scripts\nuevocerdo.cs" />
@@ -101,9 +104,8 @@
      <Compile Include="Assets\Scripts\vuelan\salvadosono.cs" />
      <Compile Include="Assets\Scripts\vuelan\switchbottons.cs" />
      <Compile Include="Assets\Scripts\vuelan\vuelan_sube.cs" />
-     <Compile Include="Assets\texturas\vuelan\objs\compara.cs" />
-     <Compile Include="Assets\texturas\vuelan\objs\movebotones.cs" />
      <Compile Include="Assets\UI\canvascode.cs" />
+     <Compile Include="Assets\UI\menupauseplay.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Norman/Documents/GitHub/save_the_pigs/cerditos/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

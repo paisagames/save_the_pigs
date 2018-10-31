@@ -25,17 +25,19 @@ public class moveleftright : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
+		float velocityx=2f;
 		if(moveleft){
 			maquina.transform.Translate(-0.02f,0,0);
 			x=-2f;
-			centerimage.rectTransform.Translate(-07f,0,0);//5bien
+			centerimage.rectTransform.Translate(-velocityx,0,0);//5bien//7
 			getnewpositionmetod();
 
 		}
 		if(moveright){
 			maquina.transform.Translate(0.02f,0,0);
 			x=2f;
-			centerimage.rectTransform.Translate(07f,0,0);
+			centerimage.rectTransform.Translate(velocityx,0,0);//07
 			getnewpositionmetod();
 		}
 		 if (Input.touchCount > 0) {
@@ -54,7 +56,7 @@ public class moveleftright : MonoBehaviour {
 			moveright=false;
 			moveleft=false;
 		}
-		
+		}
 		
 
 	}

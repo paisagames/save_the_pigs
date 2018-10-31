@@ -34,14 +34,17 @@ public class cerdo_peso : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="center2"){
 			if(entro==false){
 			suma_pesos.pesototal+=peso;
 			entro=true;
 			}
 		}
+		}
 	}
 	void OnTriggerExit(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="center2"){
 			if(entro==true){
 		suma_pesos.pesototal-=peso;
@@ -49,5 +52,6 @@ public class cerdo_peso : MonoBehaviour {
 		}
 		
 		}
+	}
 	}
 }

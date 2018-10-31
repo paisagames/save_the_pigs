@@ -68,10 +68,12 @@ public class Setentaporciento : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if(suma_pesos.cerdos_salvados>0){
 		 porcentajedecerdossalvados=(suma_pesos.cerdos_salvados*100)/cerdosenescena;
 		 }else{porcentajedecerdossalvados=0;}
 		 porcentajetext.text=porcentajedecerdossalvados+"%";
 	
+	}
 	}
 }

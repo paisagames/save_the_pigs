@@ -23,9 +23,11 @@ public class movepigsito : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		transform.Translate(0.018f,0,0);
 		nuevaposicionala=new Vector3(posicionala.transform.position.x,posicionala.transform.position.y,posicionala.transform.position.z-0.1f);
 		
+	}
 	}
 	void OnTriggerEnter(Collider other){
 		

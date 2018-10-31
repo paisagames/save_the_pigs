@@ -14,9 +14,11 @@ public class killcerditoscamion : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter(Collider other){
+		if(globalvariables.pausado==false){
 		if(other.tag=="destroy"){
 			Destroy(transform.gameObject);
 			globalvariables.totalcerdos--;
+		}
 		}
 	}
 }

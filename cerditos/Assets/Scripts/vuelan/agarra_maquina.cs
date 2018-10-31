@@ -31,6 +31,7 @@ public class agarra_maquina : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(globalvariables.pausado==false){
 		if((globalvariables.velocidadbotones*-15f)>-180f)
 		{flechita.transform.localEulerAngles=new Vector3(0,0,globalvariables.velocidadbotones*-15f);
 	//	texto.text="maq:"+globalvariables.garra;
@@ -56,7 +57,7 @@ public class agarra_maquina : MonoBehaviour {
 
 
 		}
-		
+		}
 		
 	}
 	public void bajamaquina1(){

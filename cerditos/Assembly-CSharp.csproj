@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\heliland.cs" />
      <Compile Include="Assets\Scripts\imprimepeso.cs" />
      <Compile Include="Assets\Scripts\killcerditoscamion.cs" />
+     <Compile Include="Assets\Scripts\landscap.cs" />
      <Compile Include="Assets\Scripts\lookat.cs" />
      <Compile Include="Assets\Scripts\maxtiempott.cs" />
      <Compile Include="Assets\Scripts\movecamera.cs" />
@@ -81,6 +82,8 @@
      <Compile Include="Assets\Scripts\pesomaximoaguantado.cs" />
      <Compile Include="Assets\Scripts\pigs_movement.cs" />
      <Compile Include="Assets\Scripts\play.cs" />
+     <Compile Include="Assets\Scripts\portrait.cs" />
+     <Compile Include="Assets\Scripts\restarcayendo.cs" />
      <Compile Include="Assets\Scripts\restart.cs" />
      <Compile Include="Assets\Scripts\rotacioncruz.cs" />
      <Compile Include="Assets\Scripts\rotation.cs" />

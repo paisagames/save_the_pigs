@@ -7,11 +7,17 @@ public Text textocerdo;
 public Text textobajas;
 bool touchmachin;
 public Animator animacion;
-
+public AudioSource audio1;
+public AudioSource audio2;
+public AudioSource audio3;
+public AudioSource audio4;
+int randy;
 
 
 	// Use this for initialization
 	void Start () {
+		randy=0;
+
 		
 		touchmachin=false;
 	}
@@ -28,6 +34,8 @@ public Animator animacion;
 			
 				
 		animacion.SetBool("tocino",true);
+		randy=Random.Range(1,5);
+			suena();
 		if(touchmachin==false){
 		globalvariables.bajas++;
 		touchmachin=true;}
@@ -35,13 +43,30 @@ public Animator animacion;
 
 		}
 		if(other.tag=="safe"){
+			randy=Random.Range(1,5);
+			suena();
 			Destroy(this.gameObject);
 			globalvariables.cerdossalvados++;	
+			
+			
 
 		}
 		if(other.tag=="destroy"){
+			
 			Destroy(this.gameObject);
+			
+
 		}
+	}
+}
+void suena(){
+	randy=Random.Range(1,5);
+	switch(randy){
+		case 1:audio1.playOnAwake=true;audio1.Play();break;
+		case 2:audio2.playOnAwake=true;audio2.Play();break;
+		case 3:audio3.playOnAwake=true;audio3.Play();break;
+		case 4:audio4.playOnAwake=true;audio4.Play();break;
+		default:audio1.playOnAwake=true;audio1.Play();break;
 	}
 }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class pigs_movement : MonoBehaviour {
+	public AudioSource audio1;
+public AudioSource audio2;
+public AudioSource audio3;
+public AudioSource audio4;
 	public SpriteRenderer cerdosprite;
 	public Material azul;
 	public Material pink;
@@ -37,9 +41,10 @@ public class pigs_movement : MonoBehaviour {
 
 	int posicionactual;
 	public MeshRenderer mr;
+	int randy;
 	// Use this for initialization
 	 void Start () {
-		 
+		 randy=0;
 		 tiempo=Random.Range(0.7f,2.5f);
 		scale_pigsc=transform.localScale;
 		suma_pesos.cerdos_salvados=0;
@@ -115,7 +120,16 @@ public class pigs_movement : MonoBehaviour {
 
 	}
 	}
-	
+	void suena(){
+	randy=Random.Range(1,5);
+	switch(randy){
+		case 1:audio1.playOnAwake=true;audio1.Play();break;
+		case 2:audio2.playOnAwake=true;audio2.Play();break;
+		case 3:audio3.playOnAwake=true;audio3.Play();break;
+		case 4:audio4.playOnAwake=true;audio4.Play();break;
+		default:audio1.playOnAwake=true;audio1.Play();break;
+	}
+}
 	void newrandom(){
 		double postemp=posicionactual;
 		posicionactual=Random.Range(1,16);
@@ -125,9 +139,11 @@ public class pigs_movement : MonoBehaviour {
 		if(other.tag=="cubo"){//este no es el error
 			if(timeoff==true){
 				movementbool=false;
+				suena();
 			}
 		}
 		if(other.tag=="safe"){
+			suena();
 			Destroy(transform.gameObject);
 			suma_pesos.cerdos_salvados++;
 			textosalvados.text="Saved Pigs:"+suma_pesos.cerdos_salvados+",time:"+(maxtiempott.maxtotal-maxtiempott.tiempott)+"seg";
@@ -136,7 +152,7 @@ public class pigs_movement : MonoBehaviour {
 
 		///////////////////////////////
 		if(other.tag=="dedo"){
-			
+			suena();
 			posicionactual=18;
 			tiempo=-5;
 			

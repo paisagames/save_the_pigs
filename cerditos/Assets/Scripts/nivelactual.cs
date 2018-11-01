@@ -41,15 +41,18 @@ public class nivelactual : MonoBehaviour {
 			case 1:SceneManager.LoadScene("escena1");break;
 			case 4:SceneManager.LoadScene("escena1");break;
 			case 7:SceneManager.LoadScene("escena1");break;
+			case 11:SceneManager.LoadScene("escena1");break;
 
 			case 2:SceneManager.LoadScene("historia_2");break;
 			case 5:SceneManager.LoadScene("maquinita");break;
 			case 8:SceneManager.LoadScene("maquinita");break;
+			case 12:SceneManager.LoadScene("maquinita");break;
 
 
-			case 3:SceneManager.LoadScene("camionsito");break;
-			case 6:SceneManager.LoadScene("camionsito");break;
-			case 9:SceneManager.LoadScene("camionsito");break;
+			case 3:SceneManager.LoadScene("cerdosvuelan");break;
+			case 6:SceneManager.LoadScene("cerdosvuelan");break;
+			case 9:SceneManager.LoadScene("cerdosvuelan");break;
+			case 13:SceneManager.LoadScene("cerdosvuelan");break;
 		}
 	}
 }

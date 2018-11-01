@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class movepigsito : MonoBehaviour {
+	public AudioSource audio1;
+public AudioSource audio2;
+public AudioSource audio3;
+public AudioSource audio4;
+int randy;
 	public Rigidbody rigidbody;
 	public GameObject alax;
 	public int alas;
@@ -63,10 +68,21 @@ public class movepigsito : MonoBehaviour {
 	void llevalo(){
 		GameObject ala= Instantiate(alax,nuevaposicionala,transform.rotation);
 			ala.transform.SetParent(transform);
-			ala.transform.localScale=new Vector3(1f,1f,1f);
+			ala.transform.localScale=new Vector3(0.5f,0.5f,0.5f);
 			
 			transform.eulerAngles=new Vector3(0,0,14f);
 			rigidbody.useGravity=false;
+			suena();
+	}
+	void suena(){
+	randy=Random.Range(1,5);
+	switch(randy){
+		case 1:audio1.playOnAwake=true;audio1.Play();break;
+		case 2:audio2.playOnAwake=true;audio2.Play();break;
+		case 3:audio3.playOnAwake=true;audio3.Play();break;
+		case 4:audio4.playOnAwake=true;audio4.Play();break;
+		default:audio1.playOnAwake=true;audio1.Play();break;
+	}
 	}
 	
 }

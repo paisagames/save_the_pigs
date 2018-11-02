@@ -9,16 +9,20 @@ public AudioSource audio2;
 public AudioSource audio3;
 public AudioSource audio4;
 int randy;
+public Transform puntodelanzamiento;
 	public Rigidbody rigidbody;
-	public GameObject alax;
+	
+	//public GameObject alax;
 	public int alas;
 	bool negativo;
 	public Transform posicionala;
 	public int kgs;
+	public GameObject ala;
 	Vector3 nuevaposicionala;
+	Vector3 EularagunlosIniciales;
 	// Use this for initialization
 	void Start () {
-		
+		EularagunlosIniciales=transform.eulerAngles;
 		alas=0;
 		negativo=true;
 		 nuevaposicionala=new Vector3(posicionala.transform.position.x,posicionala.transform.position.y,posicionala.transform.position.z-1f);
@@ -53,20 +57,41 @@ int randy;
 			}
 		}
 		if(other.tag=="destroy"){
-			Destroy(transform.gameObject);
+			
+			//Destroy(transform.gameObject);
+			ala.transform.SetParent(null);
 			globalvariables.velocidadbotones+=0.05f;
 			salvadosono.muertos++;
+			if(nuevocerdo.cerdosquehansalido<nuevocerdo.totaldecerdos)
+			{transform.position=puntodelanzamiento.position;
+			nuevocerdo.cerdosquehansalido++;
+			}
+			
 		
 		}
 		if(other.tag=="safe"){
-			Destroy(transform.gameObject);
+			//Destroy(transform.gameObject);
+			ala.transform.SetParent(null);
 			globalvariables.velocidadbotones+=0.05f;
 			salvadosono.salvados++;
 
+			if(nuevocerdo.cerdosquehansalido<nuevocerdo.totaldecerdos)
+			{
+			transform.position=puntodelanzamiento.position;
+			nuevocerdo.cerdosquehansalido++;
+			}
+			resetealo();
 		}
 	}
+	void resetealo(){
+		transform.eulerAngles=EularagunlosIniciales;
+		rigidbody.useGravity=true;
+		ala.transform.position=new Vector3(50f,100f,0);
+
+	}
 	void llevalo(){
-		GameObject ala= Instantiate(alax,nuevaposicionala,transform.rotation);
+		//ala= Instantiate(alax,nuevaposicionala,transform.rotation);
+		ala.transform.position=nuevaposicionala;
 			ala.transform.SetParent(transform);
 			ala.transform.localScale=new Vector3(0.5f,0.5f,0.5f);
 			

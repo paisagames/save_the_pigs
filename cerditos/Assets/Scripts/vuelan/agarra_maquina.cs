@@ -22,8 +22,15 @@ public class agarra_maquina : MonoBehaviour {
 	public Transform grisabajo;
 	public Transform grisarriba;
 	double tiempo;
+	int bolitas;
+	public Transform bolita1;
+		public Transform bolita2;
+			public Transform bolita3;
+				public Transform bolita4;
+					public Transform bolita5;
 	// Use this for initialization
 	void Start () {
+		bolitas=0;
 		tiempo=0;
 		bajamaquinabool=false;
 		globalvariables.garra=1;
@@ -43,7 +50,14 @@ public class agarra_maquina : MonoBehaviour {
 				if(tiempo>0.4){
 				Vector3 vec=new Vector3(transform.position.x,transform.position.y+0.21f,transform.position.z);
 				tiempo=0;
-				
+				switch(bolitas){
+					case 1:bolita1.position=vec;break;
+					case 2:bolita2.position=vec;break;
+					case 3:bolita3.position=vec;break;
+					case 4:bolita4.position=vec;break;
+					case 5:bolita5.position=vec;break;
+				}
+				bolitas++;
 				GameObject bolitaobj=Instantiate(bolita,vec,transform.rotation);
 				bolitaobj.transform.SetParent(maquinabase);
 				}

@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class cambiasprite : MonoBehaviour {
 public Text textocerdo;
 public Text textobajas;
-bool touchmachin;
+
 public Animator animacion;
 public AudioSource audio1;
 public AudioSource audio2;
 public AudioSource audio3;
 public AudioSource audio4;
+public Transform puntodelanzamiento;
 int randy;
 
 
@@ -19,7 +20,7 @@ int randy;
 		randy=0;
 
 		
-		touchmachin=false;
+		
 	}
 	
 	// Update is called once per frame
@@ -36,24 +37,25 @@ int randy;
 		animacion.SetBool("tocino",true);
 		randy=Random.Range(1,5);
 			suena();
-		if(touchmachin==false){
-		globalvariables.bajas++;
-		touchmachin=true;}
+		
 
 
 		}
 		if(other.tag=="safe"){
 			randy=Random.Range(1,5);
 			suena();
-			Destroy(this.gameObject);
-			globalvariables.cerdossalvados++;	
+			//Destroy(this.gameObject);
+			globalvariables.cerdossalvados++;
+			transform.position=puntodelanzamiento.position;	
 			
 			
 
 		}
 		if(other.tag=="destroy"){
-			
-			Destroy(this.gameObject);
+			animacion.SetBool("tocino",false);
+			globalvariables.bajas++;
+			transform.position=puntodelanzamiento.position;
+			//Destroy(this.gameObject);
 			
 
 		}

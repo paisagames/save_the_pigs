@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\pigs_movement.cs" />
      <Compile Include="Assets\Scripts\play.cs" />
      <Compile Include="Assets\Scripts\portrait.cs" />
+     <Compile Include="Assets\Scripts\puentodelanzamientomueve.cs" />
      <Compile Include="Assets\Scripts\restarcayendo.cs" />
      <Compile Include="Assets\Scripts\restart.cs" />
      <Compile Include="Assets\Scripts\rotacioncruz.cs" />

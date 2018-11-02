@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class byebolita : MonoBehaviour {
+	public Transform posicioninicial;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,7 @@ public class byebolita : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 		if(other.tag=="garra"){
-			Destroy(transform.gameObject);
+			transform.position=posicioninicial.position;
 		}
 	}
 }

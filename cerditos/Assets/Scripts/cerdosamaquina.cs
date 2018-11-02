@@ -48,7 +48,9 @@ public class cerdosamaquina : MonoBehaviour {
 		tiempo=tiempo+Time.deltaTime;
 		if(tiempo>8){
 			if(cerdoslanzados<maxcerdoslanzados){
+				if(cerdoslanzados<4){
 			ponuncerdo();}
+			}
 			else{
 				failwin.enabled=true;
 				botonnextlevel.enabled=true;

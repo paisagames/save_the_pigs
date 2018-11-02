@@ -21,8 +21,8 @@ public class nuevocerdo : MonoBehaviour {
 	int level;
 	// Use this for initialization
 	int randomio;
-	int totaldecerdos;
-	int cerdosquehansalido;
+	public static int totaldecerdos;
+	public static int cerdosquehansalido;
 	public Text totalcerdos;
 
 	public Image nextleveli;
@@ -85,7 +85,7 @@ public class nuevocerdo : MonoBehaviour {
 		if(globalvariables.pausado==false){
 		tiempo=tiempo+Time.deltaTime;
 		if(tiempo>x){
-			if(cerdosquehansalido<totaldecerdos){
+			if(cerdosquehansalido<7){
 			randomio=Random.Range(1,5);
 			switch(randomio){
 				case 1:GameObject nuevocerdox=Instantiate(cerdito1kg,puntodepartida.transform.position,cerdito1kg.transform.rotation);break;

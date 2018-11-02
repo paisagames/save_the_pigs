@@ -35,11 +35,11 @@ public class Setentaporciento : MonoBehaviour {
 
 		switch(nivelactual){
 			case 1:cerdosenescena=8;break;
-			case 4:cerdosenescena=12;break;
-			case 7:cerdosenescena=16;break;
-			case 10:cerdosenescena=20;break;
-			case 13:cerdosenescena=24;break;
-			case 16:cerdosenescena=30;break;
+			case 4:cerdosenescena=20;break;
+			case 7:cerdosenescena=25;break;
+			case 10:cerdosenescena=30;break;
+			case 13:cerdosenescena=35;break;
+			case 16:cerdosenescena=40;break;
 			default:cerdosenescena=8;break;
 		}
 		int randomio;

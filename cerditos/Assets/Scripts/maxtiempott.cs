@@ -21,13 +21,13 @@ public class maxtiempott : MonoBehaviour {
 		}
 
 		switch(nivelactual){
-			case 1:maxtiempototal=180f;break;
-			case 4:maxtiempototal=150f;break;
-			case 7:maxtiempototal=120f;break;
-			case 10:maxtiempototal=100f;break;
-			case 13:maxtiempototal=80f;break;
-			case 16:maxtiempototal=70f;break;
-			default:maxtiempototal=70f;break;
+			case 1:maxtiempototal=150f;break;
+			case 4:maxtiempototal=120f;break;
+			case 7:maxtiempototal=90f;break;
+			case 10:maxtiempototal=70f;break;
+			case 13:maxtiempototal=50f;break;
+			case 16:maxtiempototal=50f;break;
+			default:maxtiempototal=50f;break;
 		}
 		maxtotal=maxtiempototal;
 		tiempott=0;

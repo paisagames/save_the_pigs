@@ -12,10 +12,14 @@ public class cambia_nivel_principal : MonoBehaviour {
 	public Image vuelanimage;
 	public Button b_vuelan;
 
+	public GameObject dificultad;
+	string eleccion;
+
 
 
 	// Use this for initialization
 	void Start () {
+		eleccion="";
 	if(PlayerPrefs.HasKey("levelactualb")){
 			levelactual=PlayerPrefs.GetInt("levelactualb");
 			
@@ -47,12 +51,66 @@ public class cambia_nivel_principal : MonoBehaviour {
 	}
 
 	public void aplasta(){
-		SceneManager.LoadScene("escena1");
+		eleccion="aplasta";
+		dificultad.SetActive(true);
+		//SceneManager.LoadScene("escena1");
 	}
 	public void maquina(){
-		SceneManager.LoadScene("succionadora");
+		eleccion="maquina";
+		dificultad.SetActive(true);
+		//SceneManager.LoadScene("succionadora");
 	}
 	public void vuelan(){
-		SceneManager.LoadScene("cerdosvuelan");
+		eleccion="vuelan";
+		dificultad.SetActive(true);
+		//SceneManager.LoadScene("cerdosvuelan");
+	}
+
+	public void easy(){
+		switch(eleccion){
+			case "aplasta":PlayerPrefs.SetInt("levelactualb",1);
+			SceneManager.LoadScene("escena1");break;
+			case "maquina":PlayerPrefs.SetInt("levelactualb",2);
+			SceneManager.LoadScene("succionadora");break;
+			case "vuelan":PlayerPrefs.SetInt("levelactualb",3);
+			SceneManager.LoadScene("cerdosvuelan");break;
+			
+		}
+	}
+	public void medium(){
+		switch(eleccion){
+			case "aplasta":PlayerPrefs.SetInt("levelactualb",4);
+			SceneManager.LoadScene("escena1");break;
+			case "maquina":PlayerPrefs.SetInt("levelactualb",5);
+			SceneManager.LoadScene("succionadora");break;
+			case "vuelan":PlayerPrefs.SetInt("levelactualb",6);
+			SceneManager.LoadScene("cerdosvuelan");break;
+			
+		}
+	}
+	public void difucult(){
+		switch(eleccion){
+			case "aplasta":PlayerPrefs.SetInt("levelactualb",7);
+			SceneManager.LoadScene("escena1");break;
+			case "maquina":PlayerPrefs.SetInt("levelactualb",8);
+			SceneManager.LoadScene("succionadora");break;
+			case "vuelan":PlayerPrefs.SetInt("levelactualb",9);
+			SceneManager.LoadScene("cerdosvuelan");break;
+			
+		}
+	}
+	public void experto(){
+		switch(eleccion){
+			case "aplasta":PlayerPrefs.SetInt("levelactualb",10);
+			SceneManager.LoadScene("escena1");break;
+			case "maquina":PlayerPrefs.SetInt("levelactualb",11);
+			SceneManager.LoadScene("succionadora");break;
+			case "vuelan":PlayerPrefs.SetInt("levelactualb",12);
+			SceneManager.LoadScene("cerdosvuelan");break;
+			
+		}
+	}
+	public void back(){
+		dificultad.SetActive(false);
 	}
 }

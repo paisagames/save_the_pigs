@@ -23,12 +23,12 @@ public class pesomaximoaguantado : MonoBehaviour {
 
 		switch(nivelactual){
 			case 1:pesomaximoaguante=25f;break;
-			case 4:pesomaximoaguante=45f;break;
-			case 7:pesomaximoaguante=70f;break;
-			case 10:pesomaximoaguante=85f;break;
-			case 13:pesomaximoaguante=100f;break;
-			case 16:pesomaximoaguante=140f;break;
-			default:pesomaximoaguante=180f;break;
+			case 4:pesomaximoaguante=25f;break;
+			case 7:pesomaximoaguante=30f;break;
+			case 10:pesomaximoaguante=35f;break;
+			case 13:pesomaximoaguante=40f;break;
+			case 16:pesomaximoaguante=45f;break;
+			default:pesomaximoaguante=50f;break;
 		}
 		suma_pesos.pesomaximoaguantado=pesomaximoaguante;
 		textodepesomaximo.text="Max "+suma_pesos.pesomaximoaguantado+"kg";

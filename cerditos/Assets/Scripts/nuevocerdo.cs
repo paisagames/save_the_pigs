@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class nuevocerdo : MonoBehaviour {
 	bool gano;
@@ -27,10 +28,16 @@ public class nuevocerdo : MonoBehaviour {
 
 	public Image nextleveli;
 	public Button nextlevelb;
+	int levelactual;
 	
 	void Start () {
 		gano=false;
-
+		if(PlayerPrefs.HasKey("levelactualb")){
+		levelactual=PlayerPrefs.GetInt("levelactualb");}
+		else{
+			PlayerPrefs.SetInt("levelactualb",3);
+			levelactual=3;
+		}
 		cerdosquehansalido=0;
 		switch(level){
 			case 3:totaldecerdos=10;break;
@@ -53,10 +60,12 @@ public class nuevocerdo : MonoBehaviour {
 			if(salvadosono.salvados>setentaporciento){
 				if(gano==false){
 
-				int levelactual=PlayerPrefs.GetInt("levelactualb");
+				
 				levelactual++;
 				PlayerPrefs.SetInt("levelactualb",levelactual);
 				gano=true;
+				if(levelactual==13)
+				SceneManager.LoadScene("complete");
 				}
 				menub.enabled=true;
 				menui.enabled=true;
